@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  contador-api:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - FILE_PATH=${FILE_PATH}
+    volumes:
+      - ./data:/data
+    container_name: contador-express
