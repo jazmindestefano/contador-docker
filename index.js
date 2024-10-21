@@ -4,9 +4,6 @@ const app = express();
 const port = 3000;
 
 const filePath = process.env.FILE_PATH;
-
-console.log({ filePath });
-
 app.use(express.json());
 
 async function initializeCounterFile() {
