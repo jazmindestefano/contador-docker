@@ -1,11 +1,12 @@
 version: '3.9'
+
 services:
   contador-api:
     build: .
     ports:
       - "3000:3000"
     environment:
-      - FILE_PATH=/usr/src/app/data/${COUNTER_FILE:-counter}.json
+      FILE_PATH: data/${COUNTER_FILE:-counter}.json
     volumes:
       - myapp:/usr/src/app/data
     container_name: contador-express
