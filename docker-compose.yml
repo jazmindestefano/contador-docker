@@ -4,10 +4,11 @@ services:
     build: .
     ports:
       - "3000:3000"
-    env_file:
-      - .env
     environment:
-      - FILE_PATH=${FILE_PATH}
+      - FILE_PATH=/usr/src/app/data/${COUNTER_FILE:-counter.json}
     volumes:
-      - ./data:/data
+      - myapp:/usr/src/app/data
     container_name: contador-express
+
+volumes:
+  myapp:
