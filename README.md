@@ -1,3 +1,5 @@
-run
+run:
 - npm install
-- docker compose up --build
+
+Docker container up:
+- COUNTER_FILE={nombre del archivo} docker-compose up --build
